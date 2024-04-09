@@ -1,2 +1,5 @@
-# next-poc
-POC created using basic training from nextjs.org 
+# next-dasboard
+Project from basic training from nextjs.org 
+
+# nextjs-poc-gestedu
+POC created for final career project
