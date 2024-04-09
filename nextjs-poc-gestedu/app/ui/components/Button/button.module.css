@@ -1,0 +1,25 @@
+@import '/app/ui/styles/globals.css';
+
+.button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.outline {
+  background-color: theme('colors.sunglow');
+  border: 1px solid theme('colors.garnet');
+  color: theme('colors.black');
+}
+
+.outline:hover {
+  color: theme('colors.sunglow');
+  border: 1px solid theme('colors.garnet');
+  background-color: theme('colors.black');
+}
+
+.primary {
+  background-color: theme('colors.garnet');
+  color: theme('colors.sunglow');
+}
