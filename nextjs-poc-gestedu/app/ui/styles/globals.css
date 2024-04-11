@@ -16,7 +16,43 @@
   }
 }
 
-body {}
+@layer base {
+  body {
+    @apply text-base;
+    background-color: var(--background-color)
+  }
+
+  h1 {
+    @apply text-5xl;
+    @apply font-medium;
+  }
+
+  h2 {
+    @apply text-4xl;
+    @apply font-bold;
+  }
+
+  h3 {
+    @apply text-3xl;
+    @apply font-semibold;
+  }
+
+  h4 {
+    @apply text-2xl;
+    @apply font-bold;
+  }
+
+  h5 {
+    @apply text-xl;
+    @apply font-bold;
+  }
+
+  h6 {
+    @apply text-md;
+    @apply font-bold;
+  }
+
+}
 
 @layer utilities {
   .text-balance {
