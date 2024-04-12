@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useContext } from 'react';
 import { LoginModalContext } from 'context';
 
-export function Navbar() {
+export default function Navbar() {
   const loginModalContext = useContext(LoginModalContext);
   function handleClick() {
     loginModalContext?.setOpen(true);
