@@ -2,7 +2,7 @@
 import { z } from 'zod';
 import { sql } from '@vercel/postgres';
 import { AuthError } from 'next-auth';
-import { signIn } from '@/auth';
+import { signIn } from 'auth';
 
 export async function authenticate(
   prevState: string | undefined,

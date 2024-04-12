@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import VisibilityIcon from '@/app/ui/assets/svg/visibility.svg';
-import VisibilityOffIcon from '@/app/ui/assets/svg/visibility-off.svg';
+import VisibilityIcon from '@/ui/assets/svg/visibility.svg';
+import VisibilityOffIcon from '@/ui/assets/svg/visibility-off.svg';
 import clsx from 'clsx';
 
 interface InputFieldProps {
@@ -13,7 +13,7 @@ interface InputFieldProps {
   required: boolean;
 }
 
-export function InputField({
+export default function InputField({
   children,
   placeholder,
   type,

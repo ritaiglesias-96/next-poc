@@ -1,10 +1,10 @@
 'use client';
 import styles from './navbar.module.css';
-import GestEduIcon from '@/app/ui/assets/svg/logo-black-horizontal.svg';
-import Login from '@/app/ui/assets/svg/login.svg';
+import GestEduIcon from '@/ui/assets/svg/logo-black-horizontal.svg';
+import Login from '@/ui/assets/svg/login.svg';
 import Link from 'next/link';
 import { useContext } from 'react';
-import { LoginModalContext } from '@/context';
+import { LoginModalContext } from 'context';
 
 export function Navbar() {
   const loginModalContext = useContext(LoginModalContext);

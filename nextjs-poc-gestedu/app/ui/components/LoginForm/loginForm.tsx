@@ -1,14 +1,14 @@
 'use client';
 import styles from './loginForm.module.css';
-import GestEduIcon from '@/app/ui/assets/svg/logo-black-vertical.svg';
-import UserIcon from '@/app/ui/assets/svg/user.svg';
-import KeyIcon from '@/app/ui/assets/svg/key.svg';
-import Close from '@/app/ui/assets/svg/close.svg';
-import Button from '@/app/ui/components/Button/button';
+import GestEduIcon from '@/ui/assets/svg/logo-black-vertical.svg';
+import UserIcon from '@/ui/assets/svg/user.svg';
+import KeyIcon from '@/ui/assets/svg/key.svg';
+import Close from '@/ui/assets/svg/close.svg';
+import Button from '@/ui/components/Button/button';
 import { useContext } from 'react';
 import Link from 'next/link';
-import { LoginModalContext } from '@/context';
-import { InputField } from '../InputField/inputField';
+import { LoginModalContext } from 'context';
+import InputField from '@/ui/components/InputField/inputField';
 
 export default function LoginForm() {
   const loginModalContext = useContext(LoginModalContext);

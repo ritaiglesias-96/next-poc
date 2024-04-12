@@ -1,14 +1,19 @@
 'use client';
-import Button from '../ui/components/Button/button';
-import GestEduIcon from '@/app/ui/assets/svg/logo-black-vertical.svg';
-import UserIcon from '@/app/ui/assets/svg/user.svg';
-import EmailIcon from '@/app/ui/assets/svg/email.svg';
-import KeyIcon from '@/app/ui/assets/svg/key.svg';
-import { useState } from 'react';
-import { InputField } from '../ui/components/InputField/inputField';
+import Button from '@/ui/components/Button/button';
+import GestEduIcon from '@/ui/assets/svg/logo-black-vertical.svg';
+import UserIcon from '@/ui/assets/svg/user.svg';
+import EmailIcon from '@/ui/assets/svg/email.svg';
+import KeyIcon from '@/ui/assets/svg/key.svg';
+import InputField from '@/ui/components/InputField/inputField';
 import Link from 'next/link';
+import { LoginModalContext } from 'context';
+import { useContext } from 'react';
 
 export default function Page() {
+  const loginModalContext = useContext(LoginModalContext);
+  function handleClick() {
+    loginModalContext?.setOpen(!loginModalContext.open);
+  }
   return (
     <div className='fullPageH mx-auto w-3/5 bg-peach-yellow'>
       <h1 className='text-center text-xl md:text-4xl'>¡Bienvenidx!</h1>
@@ -56,7 +61,9 @@ export default function Page() {
           Registrarse
         </Button>
         <Button className='mx-auto w-1/3' styling='secondary'>
-          <Link href='/'>Cancelar</Link>
+          <Link href='/' onClick={handleClick}>
+            Cancelar
+          </Link>
         </Button>
       </form>
     </div>

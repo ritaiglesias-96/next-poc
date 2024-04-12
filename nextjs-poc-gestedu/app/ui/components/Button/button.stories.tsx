@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { StoryObj } from '@storybook/react';
 import './button.module.css';
 
 import Button from './button';
@@ -7,7 +7,6 @@ export default {
   component: Button,
   title: 'component/Button',
 };
-
 
 type Story = StoryObj<typeof Button>;
 

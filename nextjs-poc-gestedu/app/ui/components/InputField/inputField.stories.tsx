@@ -1,8 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import UserIcon from '@/app/ui/assets/svg/user.svg';
-import KeyIcon from '@/app/ui/assets/svg/key.svg';
+import type { StoryObj } from '@storybook/react';
+import UserIcon from '@/ui/assets/svg/user.svg';
+import KeyIcon from '@/ui/assets/svg/key.svg';
 
-import { InputField } from './inputField';
+import InputField from './inputField';
 
 export default {
   component: InputField,
