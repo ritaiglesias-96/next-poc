@@ -21,13 +21,34 @@ const config: Config = {
       sunglow: '#ffce6d',
       'peach-yellow': '#fbe2ab',
       ivory: '#f6f6e9',
+      white: '#ffffff',
     },
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      poppins: ['var(--font-poppins)'],
+    },
+    fontSize: {
+      sm: '0.8rem',
+      base: '1rem',
+      md: '1.125rem',
+      xl: '1.5rem',
+      '2xl': '2rem',
+      '3xl': '2.5rem',
+      '4xl': '3.25rem',
+      '5xl': '4.375rem',
+    },
+    fontWeight: {
+      hairline: '100',
+      extralight: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      'extra-bold': '800',
+      black: '900',
     },
     extend: {
-      backgroundImage: {
+      backgroundColor: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',

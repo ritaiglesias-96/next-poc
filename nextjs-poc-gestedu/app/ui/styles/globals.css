@@ -6,6 +6,7 @@
   --foreground-rgb: theme('colors.garnet');
   --background-start-rgb: 214, 219, 220;
   --background-color: theme('colors.peach-yellow');
+  --navbar-height: 70px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,10 +17,73 @@
   }
 }
 
-body {}
+@layer base {
+  body {
+    @apply text-base;
+    background-color: var(--background-color);
+  }
+
+  main {
+    min-height: calc(100vh - var(--navbar-height));
+  }
+
+  h1 {
+    @apply text-5xl;
+    @apply font-medium;
+  }
+
+  h2 {
+    @apply text-4xl;
+    @apply font-bold;
+  }
+
+  h3 {
+    @apply text-3xl;
+    @apply font-semibold;
+  }
+
+  h4 {
+    @apply text-2xl;
+    @apply font-bold;
+  }
+
+  h5 {
+    @apply text-xl;
+    @apply font-bold;
+  }
+
+  h6 {
+    @apply text-md;
+    @apply font-bold;
+  }
+}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .inputBox {
+    @apply flex flex-row w-full items-center px-4 py-1 bg-white border border-garnet rounded-lg justify-between;
+  }
+
+  .btn-primary {
+    @apply bg-garnet text-ivory text-md tracking-widest font-semibold py-2 px-4 hover:bg-atomic-tangerine hover:text-garnet;
+  }
+
+  .btn-secondary {
+    @apply bg-bittersweet text-white text-md tracking-widest font-semibold py-2 px-4 hover:bg-sunglow hover:text-garnet;
+  }
+
+  .btn {
+    @apply py-3 px-5 rounded-xl cursor-pointer font-bold;
+  }
+
+  .fullPageH {
+    min-height: calc(100vh - var(--navbar-height));
+  }
+}
+
+/* TODO: add differetn styles for different buttons */

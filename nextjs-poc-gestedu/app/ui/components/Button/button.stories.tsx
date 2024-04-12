@@ -1,13 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { StoryObj } from '@storybook/react';
 import './button.module.css';
 
-import { Button } from './button';
+import Button from './button';
 
-const meta: Meta<typeof Button> = {
+export default {
   component: Button,
   title: 'component/Button',
 };
-export default meta;
 
 type Story = StoryObj<typeof Button>;
 
