@@ -6,6 +6,7 @@
   --foreground-rgb: theme('colors.garnet');
   --background-start-rgb: 214, 219, 220;
   --background-color: theme('colors.peach-yellow');
+  --navbar-height: 70px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,7 +20,11 @@
 @layer base {
   body {
     @apply text-base;
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+  }
+
+  main {
+    min-height: calc(100vh - var(--navbar-height));
   }
 
   h1 {
@@ -51,7 +56,6 @@
     @apply text-md;
     @apply font-bold;
   }
-
 }
 
 @layer utilities {
@@ -59,3 +63,27 @@
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .inputBox {
+    @apply flex flex-row w-full items-center px-4 py-1 bg-white border border-garnet rounded-lg justify-between;
+  }
+
+  .btn-primary {
+    @apply bg-garnet text-ivory text-md tracking-widest font-semibold py-2 px-4 hover:bg-atomic-tangerine hover:text-garnet;
+  }
+
+  .btn-secondary {
+    @apply bg-bittersweet text-white text-md tracking-widest font-semibold py-2 px-4 hover:bg-sunglow hover:text-garnet;
+  }
+
+  .btn {
+    @apply py-3 px-5 rounded-xl cursor-pointer font-bold;
+  }
+
+  .fullPageH {
+    min-height: calc(100vh - var(--navbar-height));
+  }
+}
+
+/* TODO: add differetn styles for different buttons */

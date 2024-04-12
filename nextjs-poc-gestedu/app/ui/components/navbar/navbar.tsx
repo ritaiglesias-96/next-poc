@@ -1,17 +1,27 @@
+'use client';
 import styles from './navbar.module.css';
-import Image from 'next/image';
-import GestEduIcon from '@/ui/assets/svg/logo-black-horizontal.svg';
-import Login from '@/ui/assets/svg/login.svg';
+import GestEduIcon from '@/app/ui/assets/svg/logo-black-horizontal.svg';
+import Login from '@/app/ui/assets/svg/login.svg';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { LoginModalContext } from '@/context';
 
-export function Navbar() {
+export default function Navbar() {
+  const loginModalContext = useContext(LoginModalContext);
+  function handleClick() {
+    loginModalContext?.setOpen(true);
+  }
   return (
     <nav className={styles.navbar}>
-      <Image src={GestEduIcon} alt='GestEdu icon' />
-      <Link className={styles.signin} href='/login'>
-        <Image src={Login} alt='Login icon' />
-        <span>Ingresar</span>
+      <Link href='/'>
+        <GestEduIcon />
       </Link>
+      {!loginModalContext?.open && (
+        <button className={styles.signin} onClick={handleClick}>
+          <Login />
+          <span>Ingresar</span>
+        </button>
+      )}
     </nav>
   );
 }

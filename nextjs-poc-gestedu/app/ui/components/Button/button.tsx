@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import styles from './button.module.css';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -7,25 +6,22 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   styling?: 'primary' | 'secondary' | 'pill' | 'link' | 'outline';
 }
 
-export function Button({
+export default function Button({
   children,
   className,
   styling = 'primary',
   ...rest
 }: ButtonProps) {
-  const stylingTypes = {
-    primary: styles.primary,
-    secondary: styles.secondary,
-    pill: styles.pill,
-    link: styles.link,
-    outline: styles.outline,
+  const classes = {
+    primary: 'btn-primary btn',
+    secondary: 'btn-secondary btn',
+    pill: 'btn-pill btn',
+    link: 'btn-link btn',
+    outline: 'btn-outline btn',
   };
 
   return (
-    <button
-      {...rest}
-      className={clsx(styles.button, stylingTypes[styling], className)}
-    >
+    <button {...rest} className={clsx(classes[styling], className)}>
       {children}
     </button>
   );

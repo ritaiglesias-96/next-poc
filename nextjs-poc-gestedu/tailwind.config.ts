@@ -21,6 +21,7 @@ const config: Config = {
       sunglow: '#ffce6d',
       'peach-yellow': '#fbe2ab',
       ivory: '#f6f6e9',
+      white: '#ffffff',
     },
     fontFamily: {
       poppins: ['var(--font-poppins)'],
@@ -47,7 +48,7 @@ const config: Config = {
       black: '900',
     },
     extend: {
-      backgroundImage: {
+      backgroundColor: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',

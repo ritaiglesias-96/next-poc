@@ -1,16 +1,20 @@
-import Image from 'next/image';
-import GestEduLogo from '@/ui/assets/svg/logo-light-vertical.svg';
-import { Navbar } from '@/ui/components/navbar/navbar';
+'use client';
+import GestEduLogo from '@/app/ui/assets/svg/logo-light-vertical.svg';
+import LoginForm from './ui/components/LoginForm/loginForm';
+import { useContext } from 'react';
+import { LoginModalContext } from '@/context';
 
 export default function Home() {
+  const loginModalContext = useContext(LoginModalContext);
   return (
-    <main className='flex min-h-screen flex-col'>
-      <Navbar />
-      <section className='flex flex-col items-center justify-center flex-1'>
-        <Image src={GestEduLogo} alt='GestEdu Logo' />
-
-        <p className='text-lg text-ivory'>Administrador de gestión educativa</p>
+    <main className='flex flex-col'>
+      <section className='flex flex-1 flex-col items-center justify-center'>
+        <GestEduLogo />
+        <p className=' text-md text-ivory'>
+          Administrador de gestión educativa
+        </p>
       </section>
+      {loginModalContext?.open && <LoginForm />}
     </main>
   );
 }
